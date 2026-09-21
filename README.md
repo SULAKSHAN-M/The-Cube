@@ -1,36 +1,50 @@
 <div align="center">
 
-<img src="assets/icons/android-chrome-192x192.png" alt="The Cube icon" width="88" />
+<img width="100%" alt="THE CUBE — Rotate. Scramble. Solve." src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:07152E,50:163C79,100:38BDF8&amp;height=240&amp;section=header&amp;text=THE%20CUBE&amp;fontSize=76&amp;fontColor=FFFFFF&amp;animation=fadeIn&amp;fontAlignY=38&amp;desc=ROTATE.%20SCRAMBLE.%20SOLVE.&amp;descAlignY=62&amp;descSize=17" />
 
-THE CUBE
+The Cube
 
-A classic puzzle. A fresh perspective.
+Your next personal best starts with one turn.
 
-An interactive 3D Rubik’s Cube game with custom themes, smooth turns, and personal solve records.
+A 3D Rubik’s Cube game with custom colours, smooth motion, and saved solve records.
 
-
-
-
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&amp;size=18&amp;duration=2400&amp;pause=1200&amp;color=38BDF8&amp;center=true&amp;vCenter=true&amp;width=600&amp;lines=Four+cube+sizes.+One+classic+challenge.;Choose+your+colours.+Find+your+flow.;Scramble.+Solve.+Beat+your+best." alt="Four cube sizes. Choose your colours. Beat your best." />
 
 
-Explore features · Run locally · How to play · Contribute · Support
+
+
+
+<br />
+
+<img src="assets/icons/meta-image.png" width="680" alt="The Cube — project artwork" />
+
+<br /><br />
+
+
+
+
+
+
 
 </div>
 
-ROTATE · SCRAMBLE · SOLVE
-Four cube sizes. Five colour presets. Your next personal best.
-
-
-
-[!NOTE]
-This repository builds on the original work of Boris Sehovac. Repository customisation and maintenance: SULAKSHAN M. Original credits are preserved below.
-
-Overview
-
-The Cube brings the classic colour-matching puzzle to an interactive 3D environment. Turn cube layers, explore different cube sizes, customise the appearance, and track your solving times directly in your browser.
-The application uses Three.js for rendering and vanilla JavaScript for gameplay. The supplied project includes compiled JavaScript and CSS, so a local static web server is enough to serve the game without building the source first.
-
 Features
+
+<table>
+<tr>
+<td width="33%" align="center"><h3>🧩 Pick your challenge</h3><strong>2×2 · 3×3 · 4×4 · 5×5</strong><p>Four sizes, with adjustable scrambling.</p></td>
+<td width="33%" align="center"><h3>🎨 Make it yours</h3><strong>Five colour presets</strong><p>Fine-tune hue, saturation, and lightness.</p></td>
+<td width="33%" align="center"><h3>⏱ Chase your best</h3><strong>Timer + solve history</strong><p>Track records and recent averages.</p></td>
+</tr>
+<tr>
+<td align="center"><h3>✨ Feel every turn</h3><strong>Swift · Smooth · Bounce</strong><p>Three animations and an adjustable camera.</p></td>
+<td align="center"><h3>💾 Keep your progress</h3><strong>Saved in your browser</strong><p>Resume your puzzle with saved preferences.</p></td>
+<td align="center"><h3>🎉 Finish in style</h3><strong>A colourful celebration</strong><p>Complete the cube and aim for a new record.</p></td>
+</tr>
+</table>
+
+<details>
+<summary><strong>See the complete feature list</strong></summary>
 
 Feature
 
@@ -86,7 +100,57 @@ Controls implemented for desktop and touch interaction
 
 Statistics are recorded separately for each cube size. The displayed averages are arithmetic means of the most recent solves, rather than competition-style trimmed averages.
 
-Technology
+</details>
+
+Quick start
+
+From the folder containing index.html, start a static server:
+
+# Windows — Python 3 required
+py -m http.server 8000
+
+# macOS / Linux — Python 3 required
+python3 -m http.server 8000
+
+Open localhost:8000 in a WebGL-capable browser, then double-click or double-tap to start. No npm installation is needed to serve the included bundle.
+
+[!IMPORTANT]
+The supplied version has missing offline-support files and an incomplete legacy build script. Expand Known limitations below for the fixes; offline mode is not ready in this archive.
+
+Play your way
+
+01 · CUSTOMISE
+
+02 · TURN
+
+03 · SOLVE
+
+Choose a size, theme, and scramble length.
+
+Drag a face to turn a layer; drag outside the cube to rotate it.
+
+Match each face to one colour and check your time.
+
+<div align="center">
+
+CHOOSE YOUR PALETTE
+
+
+
+
+
+
+
+<sub>Five built-in presets, plus your own colour adjustments. Badge colours are decorative.</sub>
+
+</div>
+
+Behind the cube
+
+Everything you need to explore, customise, or contribute—expand a section below.
+
+<details>
+<summary><strong>Technology</strong></summary>
 
 Layer
 
@@ -122,62 +186,10 @@ rollup-plugin-babel-minify
 
 No backend, database, API key, or account is required for the core game.
 
-Run locally
-
-Requirements
-
-A browser with WebGL enabled.
-
-Python 3, or another static HTTP server.
-
-Start the included application
-
-Download and extract the project.
-
-Open a terminal in the folder containing index.html.
-
-Start a local web server:
-
-Windows:
-
-cd the-cube-master
-py -m http.server 8000
-
-macOS / Linux:
-
-cd the-cube-master
-python3 -m http.server 8000
-
-If your terminal is already inside the project folder, skip the cd command.
-
-Open http://localhost:8000.
-
-Double-click or double-tap the start area to begin.
-
-Press Ctrl+C in the terminal to stop the server.
-
-The supplied archive references missing UpUp offline-support files. See Known limitations below for the resulting console error and how to address it. The game scripts are loaded before that offline-support block.
-
-How to play
-
-Open settings to choose a cube size, scramble length, animation style, and theme.
-
-Return to the start screen and double-click or double-tap to start.
-
-Drag across a cube face to turn a layer.
-
-Drag outside the cube to rotate the view of the cube.
-
-Restore every face to a single colour.
-
-Open the trophy/statistics view to review your results.
-
-Use the theme editor to personalise the colours. Preferences and progress are stored in the current browser; they do not synchronise across devices.
-
-Project structure
+</details>
 
 <details>
-<summary><strong>Explore the source files</strong></summary>
+<summary><strong>Project structure</strong></summary>
 
 Path
 
@@ -273,7 +285,8 @@ Legacy package metadata and scripts
 
 </details>
 
-Development notes
+<details>
+<summary><strong>Development notes</strong></summary>
 
 The browser loads assets/js/cube.js, not the individual modules inside src/js/. Source changes therefore need to be bundled before they appear in the game.
 Likewise, changes in src/scss/ must be compiled to assets/css/styles.css.
@@ -303,7 +316,10 @@ Placeholder that deliberately exits with an error
 
 Running the existing compiled application does not require npm install.
 
-Static hosting
+</details>
+
+<details>
+<summary><strong>Static hosting</strong></summary>
 
 The runtime application consists of index.html and the assets/ directory. Serve these together from the same root, preserving their relative paths.
 Before publishing:
@@ -318,10 +334,10 @@ Preserve the original author credit and clarify any modifications you make.
 
 No server-side runtime or environment variables are needed for the core game. Do not rely on the existing npm build command as a deployment step until it has been repaired.
 
-Known limitations
+</details>
 
 <details>
-<summary><strong>Read the legacy build and runtime notes</strong></summary>
+<summary><strong>Known limitations</strong></summary>
 
 Missing offline-support files
 
@@ -348,7 +364,8 @@ Scores.js uses data.scores.lenght instead of data.scores.length in the intended 
 
 </details>
 
-Troubleshooting
+<details>
+<summary><strong>Troubleshooting</strong></summary>
 
 Problem
 
@@ -382,7 +399,10 @@ Saved records seem missing
 
 Use the same browser and site address, and check whether site data was cleared
 
-Contributing
+</details>
+
+<details>
+<summary><strong>Contributing</strong></summary>
 
 Bug reports, documentation improvements, and focused pull requests are welcome.
 
@@ -396,7 +416,10 @@ Explain what changed and how you checked it. Include before-and-after images for
 
 Good starting points include the score-history typo, the missing offline assets, and the legacy build setup described above.
 
-Ideas for future improvements
+</details>
+
+<details>
+<summary><strong>Ideas for future improvements</strong></summary>
 
 These are proposed improvements, not current features or delivery promises.
 
@@ -412,36 +435,52 @@ Add move counting and optional sound controls.
 
 Export and import local solve statistics.
 
-Support the project
+</details>
 
-If you enjoy this project, give the repository a star, share it with a puzzle enthusiast, or contribute a useful improvement. Clear bug reports and thoughtful feedback help too.
-
-Buy me a coffee
-
-
-
-Want to support SULAKSHAN M’s work on this repository? A personal support link will be added here once it is configured.
-
-<!-- Replace the unlinked badge and the sentence above with a linked badge when
-     your actual Buy Me a Coffee profile is available:
-     [![Buy Me a Coffee](https://img.shields.io/badge/Buy_Me_a_Coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=000000)](YOUR_VERIFIED_BUY_ME_A_COFFEE_URL)
-     Do not publish the placeholder as a real destination. -->
-
-Validation scope
+<details>
+<summary><strong>Validation scope</strong></summary>
 
 This README is based on inspection of the supplied project source and package configuration. It does not claim that browser compatibility, gameplay, deployment, or a repaired build pipeline has been tested.
 
-Credits and licence
+</details>
+
+Support the project
+
+<div align="center">
+
+Enjoyed the challenge?
+
+⭐ Star the repository · Share the game · Help improve it
+
+Small contributions make a difference: a clear bug report, a documentation fix, or a thoughtful feature idea.
+
+<img src="https://img.shields.io/badge/Buy_me_a_coffee-FFDD00?style=for-the-badge&amp;logo=buymeacoffee&amp;logoColor=000000" alt="Buy me a coffee — support link coming soon" />
+
+<sub>Personal support link coming soon.</sub>
+
+<!-- When your Buy Me a Coffee profile is ready, wrap the badge in an
+     <a href="YOUR_ACTUAL_PROFILE_URL">...</a> link and remove the coming-soon text. -->
+
+</div>
+
+<details>
+<summary><strong>Credits and licence</strong></summary>
 
 The supplied HTML identifies Boris Sehovac as the original author. Its metadata references the original bsehovac GitHub project.
 package.json declares ISC, but the supplied archive does not contain a standalone licence file. Preserve existing attribution and confirm the applicable upstream licence text before redistributing the project. Bundled third-party components may have their own licence notices.
 
-<div align="center">
+</details>
 
-Enjoy the challenge? Star the repository and share your best solve.
+<div align="center">
 
 Customised by SULAKSHAN M · Original game by Boris Sehovac
 
-Back to top
+↑ Back to top
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&amp;color=0:07152E,50:163C79,100:38BDF8&amp;height=100&amp;section=footer" alt="Blue wave footer" />
 
 </div>
+
+<!-- Presentation assets: Capsule Render, Readme Typing SVG, and Shields.io.
+     These hosted graphics require network access. The project artwork paths
+     assume this README sits beside index.html in the repository root. -->
